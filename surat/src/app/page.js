@@ -25,13 +25,13 @@ export default function Home() {
         </nav>
       </div>
       <div id="content-zone" className="container mx-auto">
-        <div id="surat-area" className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 sm:gap-1 md:gap-3 lg:gap-6 xl:gap-8 py-4 text-center select-none">
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+        <div id="surat-area" className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 sm:gap-1 md:gap-3 lg:gap-6 xl:gap-8 py-4 text-center select-none">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯀ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
                 <span className="cursor-pointer">
-                  <i className="bi-volume-up text-sm pr-1 pr-1"></i> Listen
+                  <i className="bi-volume-up text-sm pr-1"></i> Listen
                 </span>
               </div>
               <div id="translit">
@@ -44,7 +44,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯂ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯅ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯇ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -98,7 +98,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯉ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -116,7 +116,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯋ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -134,7 +134,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯎ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -152,7 +152,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯐ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯑ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -188,7 +188,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯒ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -206,7 +206,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯔ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -224,7 +224,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯖ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -242,7 +242,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯘ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -260,7 +260,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯛ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -278,7 +278,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯝ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -296,7 +296,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯞ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -314,7 +314,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯠ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -332,7 +332,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯤ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
@@ -350,7 +350,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" rounded-xl shadow hover:shadow-xl bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 p-2">
+          <div className="card-letter">
             <h3 className="font-['Batak'] text-9xl">ᯥ</h3>
             <div className="grid grid-cols-3 pt-2">
               <div id="listen">
