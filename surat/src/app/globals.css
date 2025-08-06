@@ -13,14 +13,14 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #d9f0ff;
+  --foreground: #00487C;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #00487C;
+    --foreground: #d9f0ff;
   }
 }
 
@@ -31,5 +31,5 @@ body {
 }
 
 .card-letter {
-  @apply p-2 rounded-xl drop-shadow-lg shadow-lg hover:shadow-xl bg-zinc-50/70 hover:bg-zinc-50/80 dark:bg-zinc-600/50 dark:hover:bg-zinc-600/80;
+  @apply p-2 rounded-xl drop-shadow-lg shadow dark:shadow-lg hover:shadow-xl transition ease-in-out;
 }
