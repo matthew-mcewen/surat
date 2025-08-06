@@ -1,6 +1,6 @@
 "use client";
 import { ALL_GLYPHS } from "@/app/letters/array";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 export default function GlyphArea() {
     const [dialect,setDialect] = useState("");
@@ -14,7 +14,8 @@ export default function GlyphArea() {
     )
 }
 
-export function GlyphCard({ batakGlyph,latinGlyph }) {
+export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
+    const [copied,setCopied] = useState(false);
     return (
         <>
             <div className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
@@ -22,19 +23,37 @@ export function GlyphCard({ batakGlyph,latinGlyph }) {
                     { batakGlyph }
                 </h3>
                 <div className={"peer absolute left-0 top-0 w-full h-full hover:bg-[#a3d5ff]/90 dark:hover:bg-[#00487C]/90 text-transparent hover:text-[#00487C] dark:hover:text-[#a3d5ff] transition ease-in-out"}>
-                    <div className={"flex flex-col justify-items-center h-full w-fit m-auto text-center text-sm xl:text-base"}>
-                        <div className={"text-base xl:text-xl flex flex-row gap-2 h-full w-full justify-between"}>
-                            <i className="bi-alphabet m-auto"/>
-                            <p className={"m-auto"}>{ latinGlyph }</p>
-                        </div>
+                    <div className={"flex flex-col justify-items-center h-full w-fit m-auto text-center xl:text-base"}>
                         <button className={"flex flex-row gap-2 h-full w-full justify-between"}>
                             <i className="bi-soundwave m-auto"/>
                             <p className={"m-auto"}>Listen</p>
                         </button>
-                        <button className={"flex flex-row gap-2 h-full w-full justify-between"}>
-                            <i className="bi-clipboard-plus m-auto"/>
-                            <p className={"m-auto"}>Copy</p>
-                        </button>
+                        <div className={"text-lg xl:text-2xl flex flex-row gap-2 h-full w-full justify-between"}>
+                            <i className="bi-alphabet m-auto"/>
+                            <p className={"m-auto"}>{ latinGlyph }</p>
+                        </div>
+                        { (copied) && (
+                            <button
+                                onClick={e => {
+                                    navigator.clipboard.writeText(batakGlyph)
+                                }}
+                                className={"flex flex-row gap-2 h-full w-full justify-between"}
+                            >
+                                <i className="bi-clipboard-check-fill m-auto"/>
+                                <p className={"m-auto"}>Copied!</p>
+                            </button>
+                        ) || (
+                            <button
+                                onClick={(e) => {
+                                navigator.clipboard.writeText(batakGlyph)
+                                .then(response => (setCopied(true)))
+                                }}
+                                className={"flex flex-row gap-2 h-full w-full justify-between"}
+                            >
+                                <i className="bi-clipboard-plus m-auto"/>
+                                <p className={"m-auto"}>Copy</p>
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
@@ -82,7 +101,7 @@ function SelectGlyphs({ setDialect }) {
                 <select
                     defaultValue={"toba"}
                     onChange={(e) => setDialect(e.target.value)}
-                    className={"text-xl text-center font-light dark:bg-[#00487C] bg-[#d9f0ff] mx-auto border rounded-full p-1.5 px-4 font-sans"}
+                    className={"text-xl text-center font-light dark:bg-[#00487C] bg-[#d9f0ff] mx-auto border border-[#00487C] dark:border-[#d9f0ff] rounded-full p-1.5 px-4 font-sans"}
                 >
                     <option value={"toba"}>Batak Toba</option>
                     <option value={"karo"}>Batak Karo</option>
