@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 
-export function HowItWorks() {
+export default function HowItWorks() {
     const [revealed,setRevealed] = useState(false);
     return (
         <>
-            <div className={"lg:w-4/5 xl:w-1/2 mx-auto flex flex-col gap-1"}>
+            <div id={"howitworks"} className={"lg:w-4/5 xl:w-1/2 mx-auto flex flex-col gap-1"}>
                 <h3 className={"text-xl md:text-3xl font-light flex gap-2 w-fit mx-auto"}>
                     <i className={"bi-patch-question text-xl my-auto"}/>
                     How does it work?

@@ -43,8 +43,7 @@ export const ALL_GLYPHS = {
     ],
     mandailing: [
         {batakGlyph:"ᯀ",latinGlyph:"a"},
-        {batakGlyph:"ᯄ",latinGlyph:"ha"},
-        {batakGlyph:"ᯄ",latinGlyph:"ka"}, // missing diacritic
+        {batakGlyph:"ᯄ",latinGlyph:"ha / ka"}, // missing diacritical ka
         {batakGlyph:"ᯅ",latinGlyph:"ba"},
         {batakGlyph:"ᯇ",latinGlyph:"pa"},
         {batakGlyph:"ᯉ",latinGlyph:"na"},

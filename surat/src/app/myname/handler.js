@@ -12,12 +12,12 @@ export default function WriteMyName() {
             <div id={"writemyname"} className={"flex flex-col gap-1.5 lg:w-4/5 xl:w-1/2 mx-auto"}>
                 <h3 className={"text-xl md:text-3xl font-light flex gap-2 w-fit mx-auto tracking-wide"}>
                     <i className={"bi-person-raised-hand text-xl my-auto"}/>
-                    What's my name?
+                    How to write my name in Batak Script?
                 </h3>
                 <input
                     type={"text"}
                     onChange={(e) => setLatinName(e.target.value)}
-                    className={"rounded-full p-1.5 px-3 bg-transparent border placeholder-[#d9f0ff] text-center"} placeholder={"👋 What's your name?"}
+                    className={"rounded-full p-1.5 px-3 bg-transparent border placeholder-[#d9f0ff] text-center"} placeholder={"👋 What's your name in English?"}
                 />
                 <p className={"text-xs text-center tracking-wide"}>Note: We don't store or save this data &mdash; once you leave, it's deleted forever</p>
                 <div className={"rounded-xl overflow-hidden flex flex-col"}>
