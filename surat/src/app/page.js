@@ -3,6 +3,7 @@ import "./globals.css";
 import GlyphArea from "@/app/letters/letters";
 import WriteMyName from "@/app/myname/handler";
 import {HowItWorks} from "@/app/textual/explain";
+import Resources from "@/app/resources/handler";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
                 <GlyphArea/>
                 <HowItWorks/>
                 <WriteMyName/>
+                <Resources/>
                 <Footer/>
             </div>
         </>
@@ -21,7 +23,7 @@ export default function Home() {
 function Navbar() {
     return (
         <>
-            <h1 className="text-4xl text-center pb-2">
+            <h1 className="text-4xl text-center pb-2 tracking-wide">
                 Surat Batak
             </h1>
             <nav className="flex flex-row justify-between px-2">

@@ -31,7 +31,7 @@ body {
 }
 
 .card-letter {
-  @apply p-2 rounded-xl drop-shadow-lg shadow dark:shadow-lg hover:shadow-xl transition ease-in-out;
+  @apply p-2 rounded-xl drop-shadow-lg shadow dark:shadow-lg hover:shadow-xl transition ease-in-out bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30;
 }
 
 .batak {

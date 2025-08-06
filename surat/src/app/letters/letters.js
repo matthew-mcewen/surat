@@ -18,7 +18,7 @@ export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
     const [copied,setCopied] = useState(false);
     return (
         <>
-            <div className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
+            <div id={"glyphtiles"} className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
                 <h3 className="font-['Batak'] text-5xl lg:text-6xl xl:text-7xl p-1.5 m-auto">
                     { batakGlyph }
                 </h3>
@@ -97,11 +97,11 @@ function GlyphList({ dialect }) {
 function SelectGlyphs({ setDialect }) {
     return (
         <>
-            <div className={"flex"}>
+            <div className={"flex w-full"}>
                 <select
                     defaultValue={"toba"}
                     onChange={(e) => setDialect(e.target.value)}
-                    className={"text-xl text-center font-light dark:bg-[#00487C] bg-[#d9f0ff] mx-auto border border-[#00487C] dark:border-[#d9f0ff] rounded-full p-1.5 px-4 font-sans"}
+                    className={"w-full lg:w-4/5 xl:w-1/2 text-2xl text-center font-light dark:bg-[#00487C] bg-[#d9f0ff] mx-auto border border-[#00487C] dark:border-[#d9f0ff] rounded-full p-1.5 px-4 font-sans tracking-wide"}
                 >
                     <option value={"toba"}>Batak Toba</option>
                     <option value={"karo"}>Batak Karo</option>
