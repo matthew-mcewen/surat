@@ -108,3 +108,35 @@ export const ALL_GLYPHS = {
         {batakGlyph:"ᯥ",latinGlyph:"u"}
     ]
 }
+
+export const TRANSLITERATION_MAP = {
+        // Basic consonant + inherent vowel "a"
+        'ba': 'ᯅ',
+        'pa': 'ᯇ',
+        'ta': 'ᯖ',
+        'da': 'ᯑ',
+        'ga': 'ᯄ',
+        'ma': 'ᯔ',
+        'na': 'ᯉ',
+        'la': 'ᯞ',
+        'sa': 'ᯘ',
+        'ra': 'ᯒ',
+        'ha': 'ᯂ',
+        'ya': 'ᯛ',
+
+        // Vowel-modifying diacritics (Anak Si Surat)
+        'i': 'ᯪ',
+        'u': 'ᯮ',
+        'e': 'ᯫ', // potentially accent variable
+        'o': 'ᯬ',
+
+        // Vowel-only syllables
+        'a': 'ᯀ',
+        'i_': 'ᯤ', // i as isolated vowel
+        'u_': 'ᯥ', // u as isolated vowel
+        'e_': 'ᯧ',
+        'o_': 'ᯮ',
+
+        // Final consonant killer
+        '⁼': '᯲', // pangolat (virama)
+}
