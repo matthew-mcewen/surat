@@ -1,39 +1,97 @@
-export function GlyphCard({ batakGlyph,latinGlyph }) {
+"use client";
+import { ALL_GLYPHS } from "@/app/letters/array";
+import { useState } from "react";
+
+export default function GlyphArea() {
+    const [dialect,setDialect] = useState("");
     return (
-        <div className="card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
-            <h3 className="font-['Batak'] text-4xl lg:text-5xl xl:text-6xl">
-                { batakGlyph }
-            </h3>
-            <div id="translit" className={"cursor-default"}>
-                <i className="bi-alphabet px-1"/>
-                { latinGlyph }
+        <>
+            <SelectGlyphs setDialect={ setDialect } />
+            <div id="surat-area" className="grid grid-cols-4 md:grid-cols-7 xl:grid-cols-8 gap-1.5 text-center select-none">
+                <GlyphList dialect={ dialect } />
             </div>
-        </div>
+        </>
     )
 }
 
-export function GlyphList() {
+export function GlyphCard({ batakGlyph,latinGlyph }) {
     return (
         <>
-            <GlyphCard batakGlyph={"ᯀ"} latinGlyph={"a"} />
-            <GlyphCard batakGlyph={"ᯂ"} latinGlyph={"ha / ka"} />
-            <GlyphCard batakGlyph={"ᯅ"} latinGlyph={"ba"} />
-            <GlyphCard batakGlyph={"ᯉ"} latinGlyph={"na"} />
-            <GlyphCard batakGlyph={"ᯇ"} latinGlyph={"pa"} />
-            <GlyphCard batakGlyph={"ᯋ"} latinGlyph={"wa"} />
-            <GlyphCard batakGlyph={"ᯎ"} latinGlyph={"ga"} />
-            <GlyphCard batakGlyph={"ᯐ"} latinGlyph={"dja"} />
-            <GlyphCard batakGlyph={"ᯑ"} latinGlyph={"da"} />
-            <GlyphCard batakGlyph={"ᯒ"} latinGlyph={"ra"} />
-            <GlyphCard batakGlyph={"ᯔ"} latinGlyph={"ma"} />
-            <GlyphCard batakGlyph={"ᯖ"} latinGlyph={"ta"} />
-            <GlyphCard batakGlyph={"ᯘ"} latinGlyph={"sa"} />
-            <GlyphCard batakGlyph={"ᯛ"} latinGlyph={"ya"} />
-            <GlyphCard batakGlyph={"ᯝ"} latinGlyph={"nga"} />
-            <GlyphCard batakGlyph={"ᯞ"} latinGlyph={"la"} />
-            <GlyphCard batakGlyph={"ᯠ"} latinGlyph={"nya"} />
-            <GlyphCard batakGlyph={"ᯤ"} latinGlyph={"i"} />
-            <GlyphCard batakGlyph={"ᯥ"} latinGlyph={"u"} />
+            <div className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
+                <h3 className="font-['Batak'] text-5xl lg:text-6xl xl:text-7xl p-1.5 m-auto">
+                    { batakGlyph }
+                </h3>
+                <div className={"peer absolute left-0 top-0 w-full h-full hover:bg-[#a3d5ff]/90 dark:hover:bg-[#00487C]/90 text-transparent hover:text-[#00487C] dark:hover:text-[#a3d5ff] transition ease-in-out"}>
+                    <div className={"flex flex-col justify-items-center h-full w-fit m-auto text-center text-sm xl:text-base"}>
+                        <div className={"text-base xl:text-xl flex flex-row gap-2 h-full w-full justify-between"}>
+                            <i className="bi-alphabet m-auto"/>
+                            <p className={"m-auto"}>{ latinGlyph }</p>
+                        </div>
+                        <button className={"flex flex-row gap-2 h-full w-full justify-between"}>
+                            <i className="bi-soundwave m-auto"/>
+                            <p className={"m-auto"}>Listen</p>
+                        </button>
+                        <button className={"flex flex-row gap-2 h-full w-full justify-between"}>
+                            <i className="bi-clipboard-plus m-auto"/>
+                            <p className={"m-auto"}>Copy</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+function GlyphList({ dialect }) {
+    let glyphs = null;
+    if (!dialect || dialect === "toba") {
+        glyphs = ALL_GLYPHS.toba;
+    } else {
+        if (dialect === "karo") {
+            glyphs = ALL_GLYPHS.karo;
+        }
+        if (dialect === "mandailing") {
+            glyphs = ALL_GLYPHS.mandailing;
+        }
+        if (dialect === "pakpak") {
+            glyphs = ALL_GLYPHS.pakpak;
+        }
+        if (dialect === "simalungun") {
+            glyphs = ALL_GLYPHS.simalungun;
+        }
+    }
+    return (
+        <>
+            { glyphs && glyphs.map((g, index) => (
+                <GlyphCard key={index} batakGlyph={g.batakGlyph} latinGlyph={g.latinGlyph}/>
+            ))}
+            { (!glyphs || !glyphs.length) && (
+                <div className={"text-center text-2xl font-light w-full col-span-12"}>
+                    Oops! Content not found
+                    <p className={"text-lg"}>Try re-loading the page</p>
+                </div>
+            )}
+        </>
+    )
+}
+
+function SelectGlyphs({ setDialect }) {
+    return (
+        <>
+            <div className={"flex"}>
+                <select
+                    defaultValue={"toba"}
+                    onChange={(e) => setDialect(e.target.value)}
+                    className={"text-xl text-center font-light dark:bg-[#00487C] bg-[#d9f0ff] mx-auto border rounded-full p-1.5 px-4 font-sans"}
+                >
+                    <option value={"toba"}>Batak Toba</option>
+                    <option value={"karo"}>Batak Karo</option>
+                    <option value={"pakpak"}>Batak Pakpak</option>
+                    <option value={"mandailing"}>Batak Mandailing</option>
+                    <option value={"simalungun"}>Batak Simalungun</option>
+                    <option value={"anak"}>Anak Si Surat (Diacritics)</option>
+                </select>
+            </div>
         </>
     )
 }
