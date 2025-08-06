@@ -33,3 +33,7 @@ body {
 .card-letter {
   @apply p-2 rounded-xl drop-shadow-lg shadow dark:shadow-lg hover:shadow-xl transition ease-in-out;
 }
+
+.batak {
+  @apply font-['Batak'];
+}
