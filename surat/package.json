@@ -6,18 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-on-pages --experimental-minify",
     "lint": "next lint"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.13.1",
-    "next": "^15.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^13.5.0",   // or whatever version you're using
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.13",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "@cloudflare/next-on-pages": "^1.13.13"
   }
 }
-
