@@ -25,21 +25,29 @@ export function Navbar() {
     return (
         <>
             <nav className={"flex justify-between px-2 font-light"}>
-                <h1 className="text-4xl text-center pb-2 tracking-wide">
+                <h1 className="text-4xl text-center pb-2 tracking-wide w-fit">
                     Surat Batak
                 </h1>
-                <ul className="flex flex-row text-xl h-fit my-auto gap-4">
+                <ul className="flex-row text-xl h-fit my-auto gap-4 hidden lg:flex">
                     <a href={"/#writemyname"}>Write My Name</a>
                     <a href={"/#howitworks"}>How It Works</a>
                 </ul>
-                <div className={"flex flex-row gap-4 h-fit my-auto"}>
+                <div className={"flex-row gap-4 h-fit my-auto hidden lg:flex"}>
                     <div className={"flex gap-2"}>
                         <i className="bi-cup-hot text-lg my-auto"/>
                         <p className={"my-auto"}>Donate</p>
                     </div>
                     <div className={"flex gap-2"}>
-                        <i className="bi-translate text-lg my-auto"/>
+                        <i className="bi-translate text-lg my-auto hidden lg:flex"/>
                         <p className={"my-auto"}>English</p>
+                    </div>
+                </div>
+                <div className={"flex lg:hidden relative w-1/2 justify-end"}>
+                    <i className={"bi-list text-3xl my-auto peer self-end"}/>
+                    <div className={"hidden peer-hover:flex w-full"}>
+                        <div className={"absolute card-letter top-9 w-full"}>
+                            mobi
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -52,7 +60,7 @@ export function Footer() {
         <>
             <footer id={"footer"} className={"flex flex-row justify-between px-4"}>
                 <div className={"flex flex-col gap-0.5"}>
-                    <a href={"/legal"}>Legal, Terms &amp; Conditions</a>
+                    <Link href={"/legal"}>Legal, Terms &amp; Conditions</Link>
                     <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
                     <p>Audio recordings &mdash; Peter Isolato (CC BY-SA 3.0)</p>
                 </div>
