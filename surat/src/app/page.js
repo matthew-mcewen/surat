@@ -4,6 +4,7 @@ import GlyphArea from "@/app/letters/letters";
 import WriteMyName from "@/app/myname/handler";
 import HowItWorks from "@/app/textual/explain";
 import Resources from "@/app/resources/handler";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -51,13 +52,14 @@ export function Footer() {
         <>
             <footer id={"footer"} className={"flex flex-row justify-between px-4"}>
                 <div className={"flex flex-col gap-0.5"}>
-                    <a href={"/legal"}>Legal</a>
-                    &copy; 2025 8gb.dev &mdash; all rights reserved
+                    <a href={"/legal"}>Legal, Terms &amp; Conditions</a>
+                    <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
+                    <p>Audio recordings &mdash; Peter Isolato (CC BY-SA 3.0)</p>
                 </div>
-                <div className={"grid grid-cols-2 gap-x-2"}>
+                <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-x-2 self-end"}>
                     <p>Bsky</p>
                     <i className={"bi-bluesky justify-self-end"}/>
-                </div>
+                </Link>
             </footer>
         </>
     )
