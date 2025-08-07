@@ -9,7 +9,7 @@ export default function WriteMyName() {
     }, [latinName])
     return (
         <>
-            <div id={"writemyname"} className={"flex flex-col gap-1.5 lg:w-4/5 xl:w-1/2 mx-auto"}>
+            <div id={"writemyname"} className={"flex flex-col gap-1.5 w-full lg:w-4/5 xl:w-1/2 mx-auto"}>
                 <h3 className={"text-xl md:text-3xl font-light flex gap-2 w-fit mx-auto tracking-wide"}>
                     <i className={"bi-person-raised-hand text-xl my-auto"}/>
                     How to write my name in Batak Script?

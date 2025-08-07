@@ -3,7 +3,7 @@
 export default function Resources() {
     return (
         <>
-            <div className={"flex flex-col gap-1.5 lg:w-1/5 xl:w-1/2 mx-auto"}>
+            <div className={"flex flex-col gap-1.5 w-full lg:w-4/5 xl:w-1/2 mx-auto"}>
                 <h3 className={"text-3xl mx-auto font-light tracking-wide"}>
                     <i className={"bi-list-nested"}/>
                     List of resources
