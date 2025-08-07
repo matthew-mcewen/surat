@@ -17,6 +17,7 @@
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.13"
+    "@cloudflare/next-on-pages": "^1.13.13",
+    "@tailwindcss/postcss": "^4.1.11"
   }
 }
