@@ -25,12 +25,12 @@ export function Navbar() {
     return (
         <>
             <nav className={"flex justify-between px-2 font-light select-none"}>
-                <a href={"/#top"} className="text-4xl text-center pb-2 tracking-wide w-fit">
+                <h1 className="text-4xl text-center pb-2 tracking-wide w-fit">
                     Surat Batak
-                </a>
+                </h1>
                 <ul className="flex-row text-xl h-fit my-auto gap-4 flex justify-self-center text-center">
-                    <a href={"/#writemyname"}>Write My Name</a>
-                    <a href={"/#howitworks"}>How It Works</a>
+                    <a href={"#writemyname"}>Write My Name</a>
+                    <a href={"#howitworks"}>How It Works</a>
                 </ul>
                 <div className={"flex-row gap-4 h-fit my-auto hidden"}>
                     <div className={"flex gap-2"}>
