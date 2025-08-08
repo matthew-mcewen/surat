@@ -1,6 +1,7 @@
 "use client";
 import { ALL_GLYPHS } from "@/app/letters/array";
 import { useEffect, useState } from "react";
+import useSound from "use-sound";
 
 export default function GlyphArea() {
     const [dialect,setDialect] = useState("");
@@ -16,7 +17,7 @@ export default function GlyphArea() {
 
 export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
     const [copied,setCopied] = useState(false);
-
+    const [play] = useSound(`/audio/${latinGlyph}.mp3`);
     return (
         <>
             <div id={"glyphtiles"} className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
@@ -26,7 +27,7 @@ export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
                 <div className={"peer absolute left-0 top-0 w-full h-full hover:bg-[#a3d5ff]/90 dark:hover:bg-[#00487C]/90 text-transparent hover:text-[#00487C] dark:hover:text-[#a3d5ff] transition ease-in-out"}>
                     <div className={"flex flex-col justify-items-center h-full w-fit m-auto text-center xl:text-base"}>
                         <button
-                            onClick={(e) => {}}
+                            onClick={(e) => {play}}
                             className={"flex flex-row gap-2 h-full w-full justify-between cursor-point"}
                         >
                             <i className="bi-soundwave m-auto"/>
