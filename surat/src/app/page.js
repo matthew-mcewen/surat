@@ -28,7 +28,7 @@ export function Navbar() {
                 <Link href={"/"} className="text-4xl text-center pb-2 tracking-wide w-fit">
                     Surat Batak
                 </Link>
-                <ul className="flex-row text-xl h-fit my-auto gap-4 flex justify-self-center">
+                <ul className="flex-row text-xl h-fit my-auto gap-4 flex justify-self-center text-center">
                     <a href={"/#writemyname"}>Write My Name</a>
                     <a href={"/#howitworks"}>How It Works</a>
                 </ul>
@@ -60,12 +60,12 @@ export function Footer() {
     return (
         <>
             <footer id={"footer"} className={"container mx-auto flex flex-row justify-between px-4 border-t w-full select-none py-2"}>
-                <div className={"flex flex-col gap-0.5"}>
+                <div className={"flex flex-col gap-0.5 w-1/2 lg:w-fit"}>
                     <Link href={"/legal"}>Legal, Terms &amp; Conditions</Link>
                     <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
                     <p>Audio recordings &mdash; Peter Isolato (CC BY-SA 3.0)</p>
                 </div>
-                <div className={"flex flex-col gap-0.5 justify-self-end"}>
+                <div className={"flex flex-col gap-0.5 justify-self-end w-1/2 lg:w-fit"}>
                     <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-x-2"}>
                         <p>Ko-Fi</p>
                         <i className={"bi-cup-hot-fill justify-self-end"}/>
