@@ -27,7 +27,7 @@ export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
                 <div className={"peer absolute left-0 top-0 w-full h-full hover:bg-[#a3d5ff]/90 dark:hover:bg-[#00487C]/90 text-transparent hover:text-[#00487C] dark:hover:text-[#a3d5ff] transition ease-in-out"}>
                     <div className={"flex flex-col justify-items-center h-full w-fit m-auto text-center xl:text-base"}>
                         <button
-                            onClick={(e) => {play}}
+                            onClick={e => (play)}
                             className={"flex flex-row gap-2 h-full w-full justify-between cursor-point"}
                         >
                             <i className="bi-soundwave m-auto"/>
