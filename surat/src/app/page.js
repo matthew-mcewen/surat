@@ -59,7 +59,7 @@ export function Navbar() {
 export function Footer() {
     return (
         <>
-            <footer id={"footer"} className={"flex flex-row justify-between px-4 border-t w-full select-none p-2"}>
+            <footer id={"footer"} className={"container mx-auto flex flex-row justify-between px-4 border-t w-full select-none py-2"}>
                 <div className={"flex flex-col gap-0.5"}>
                     <Link href={"/legal"}>Legal, Terms &amp; Conditions</Link>
                     <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
