@@ -71,7 +71,7 @@ export function Footer() {
                         <i className={"bi-cup-hot-fill justify-self-end"}/>
                     </Link>
                     <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-x-2"}>
-                        <p>Bsky</p>
+                        <p>BlueSky</p>
                         <i className={"bi-bluesky justify-self-end"}/>
                     </Link>
                     <Link href={"https://github.com/mattmacc/surat"} className={"grid grid-cols-2 gap-x-2"}>
