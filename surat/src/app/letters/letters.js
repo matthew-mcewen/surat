@@ -17,7 +17,7 @@ export default function GlyphArea() {
 export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
     const [copied,setCopied] = useState(false);
     const audio = document.createElement(`audio`);
-    audio.setAttribute(`src`,`/audio/${ latinGlyph }.mp3`);
+    audio.setAttribute(`src`,`audio/${ latinGlyph }.mp3`);
     audio.setAttribute(`className`,`hidden`);
     return (
         <>
