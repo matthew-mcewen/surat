@@ -68,15 +68,15 @@ export function Footer() {
                 <div className={"flex flex-col gap-0.5 justify-self-end w-1/2 lg:w-fit"}>
                     <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-2 w-fit"}>
                         <p>Ko-Fi</p>
-                        <i className={"bi-cup-hot-fill justify-self-end w-fit"}/>
+                        <i className={"bi-cup-hot-fill"}/>
                     </Link>
                     <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-2 w-fit"}>
                         <p>BlueSky</p>
-                        <i className={"bi-bluesky justify-self-end w-fit"}/>
+                        <i className={"bi-bluesky"}/>
                     </Link>
                     <Link href={"https://github.com/mattmacc/surat"} className={"grid grid-cols-2 gap-2 w-fit"}>
                         <p>GitHub</p>
-                        <i className={"bi-github justify-self-end w-fit"}/>
+                        <i className={"bi-github"}/>
                     </Link>
                 </div>
             </footer>
