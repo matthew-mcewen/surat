@@ -74,10 +74,10 @@ export function Footer() {
                         <p>BlueSky</p>
                         <i className={"bi-bluesky justify-self-end"}/>
                     </Link>
-                    <Link href={"https://github.com/mattmacc/surat"} className={"grid grid-cols-2 gap-2"}>
-                        <p>GitHub</p>
-                        <i className={"bi-github justify-self-end"}/>
-                    </Link>
+                    {/*<Link href={"https://github.com/"} className={"grid grid-cols-2 gap-2"}>*/}
+                    {/*    <p>GitHub</p>*/}
+                    {/*    <i className={"bi-github justify-self-end"}/>*/}
+                    {/*</Link>*/}
                 </div>
             </footer>
         </>
