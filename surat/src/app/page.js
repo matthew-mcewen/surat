@@ -66,15 +66,15 @@ export function Footer() {
                     <p>Audio recordings &mdash; Peter Isolato (CC BY-SA 3.0)</p>
                 </div>
                 <div className={"flex flex-col gap-0.5 justify-self-end w-1/2 lg:w-fit"}>
-                    <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-x-2 w-fit"}>
+                    <Link href={"https://ko-fi.com/batak"} className={"flex flex-row gap-2 w-fit"}>
                         <p>Ko-Fi</p>
-                        <i className={"bi-cup-hot-fill justify-self-end"}/>
+                        <i className={"bi-cup-hot-fill justify-self-end w-fit"}/>
                     </Link>
-                    <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-x-2"}>
+                    <Link href={"https://bsky.app/profile/batak.asia"} className={"flex flex-row gap-2 w-fit"}>
                         <p>BlueSky</p>
                         <i className={"bi-bluesky justify-self-end"}/>
                     </Link>
-                    <Link href={"https://github.com/mattmacc/surat"} className={"grid grid-cols-2 gap-x-2"}>
+                    <Link href={"https://github.com/mattmacc/surat"} className={"flex flex-row gap-2 w-fit"}>
                         <p>GitHub</p>
                         <i className={"bi-github justify-self-end"}/>
                     </Link>
