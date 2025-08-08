@@ -21,7 +21,6 @@ export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
     audio.setAttribute(`className`,`hidden`);
     return (
         <>
-            <audio id={`audio-${ latinGlyph }`} src={`/audio/${ latinGlyph }.mp3`} className={"hidden"}/>
             <div id={"glyphtiles"} className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
                 <h3 className="font-['Batak'] text-5xl lg:text-6xl xl:text-7xl p-1.5 m-auto">
                     { batakGlyph }
