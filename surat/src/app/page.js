@@ -72,11 +72,11 @@ export function Footer() {
                     </Link>
                     <Link href={"https://bsky.app/profile/batak.asia"} className={"flex flex-row gap-2 w-fit"}>
                         <p>BlueSky</p>
-                        <i className={"bi-bluesky justify-self-end"}/>
+                        <i className={"bi-bluesky justify-self-end w-fit"}/>
                     </Link>
                     <Link href={"https://github.com/mattmacc/surat"} className={"flex flex-row gap-2 w-fit"}>
                         <p>GitHub</p>
-                        <i className={"bi-github justify-self-end"}/>
+                        <i className={"bi-github justify-self-end w-fit"}/>
                     </Link>
                 </div>
             </footer>
