@@ -4,8 +4,8 @@ import {Footer, Navbar} from "@/app/page";
 export default function Legal() {
     return (
         <>
-            <Navbar/>
             <div className={"container-mx-auto"}>
+                <Navbar/>
                 <div className={"flex flex-col mx-auto py-12 gap-2 px-4 w-full lg:w-4/5 xl:w-1/2"}>
                     <h1 className={"text-3xl font-light"}>
                         Legal
