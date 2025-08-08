@@ -14,7 +14,7 @@ export default function Home() {
                 <GlyphArea/>
                 <HowItWorks/>
                 <WriteMyName/>
-                <Resources/>
+                {/*<Resources/>*/}
             </div>
             <Footer/>
         </>
