@@ -65,6 +65,9 @@ export default function Legal() {
                             4. Donations
                         </h2>
                         <p>
+                            Donations are non-refundable and not tax-deductible.
+                        </p>
+                        <p>
                             When you donate through Ko-fi or other platforms, your payment information is handled entirely by those third parties. We do not store or access your payment details.
                         </p>
                     </>

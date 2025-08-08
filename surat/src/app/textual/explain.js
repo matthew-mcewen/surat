@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function HowItWorks() {
     const [revealed,setRevealed] = useState(false);
@@ -18,14 +19,14 @@ export default function HowItWorks() {
                     </p>
                     <p>
                         Each letter has the "A" vowel by default. We can change the vowel by attaching an accent mark, called Anak Si Surat.
-                        For example: <span className={"text-xl font-medium px-0.5"}>ᯖ</span> on its own is read as "ta", but if we write <span className={"text-xl medium px-0.5"}>ᯖᯬ</span> it becomes "to", and <span className={"text-xl font-medium px-0.5"}>ᯖᯪ</span> makes it "ti".
+                        For example: <span className={"text-xl font-medium px-0.5 font-['Batak']"}>ᯖ</span> on its own is read as "ta", but if we write <span className={"text-xl medium px-0.5 font-['Batak']"}>ᯖᯬ</span> it becomes "to", and <span className={"text-xl font-medium px-0.5 font-['Batak']"}>ᯖᯪ</span> makes it "ti".
                     </p>
                     <p>
                         When you're ready &mdash; Using the Tiles above, try to understand this word written in Surat Batak:
                     </p>
                     { (!revealed && (
                         <button onClick={e => { setRevealed(true) }} className={"flex flex-col gap-1 w-fit mx-auto"}>
-                            <span className={"text-2xl batak w-fit mx-auto"}>ᯘᯮᯒᯖ᯲ </span>
+                            <span className={"text-2xl w-fit mx-auto font-['Batak']"}>ᯘᯮᯒᯖ᯲ </span>
                             <span className={"w-fit mx-auto"}>Click to reveal&hellip;</span>
                         </button>
                     ) || (
@@ -34,9 +35,9 @@ export default function HowItWorks() {
                                 It reads "Surat"!
                             </p>
                             <div className={"grid grid-cols-3 w-fit mx-auto text-center gap-x-6"}>
-                                <div className={"text-xl batak"}>ᯘᯮ </div>
-                                <div className={"text-xl batak"}>ᯒ</div>
-                                <div className={"text-xl batak"}>ᯖ᯲</div>
+                                <div className={"text-xl font-['Batak']"}>ᯘᯮ </div>
+                                <div className={"text-xl font-['Batak']"}>ᯒ</div>
+                                <div className={"text-xl font-['Batak']"}>ᯖ᯲</div>
                                 <div>su</div>
                                 <div>ra</div>
                                 <div>t</div>
@@ -45,7 +46,7 @@ export default function HowItWorks() {
                                 Surat means "letter" or "writing". So, "Surat Batak" means "Bataknese Writing" &mdash; cool!
                             </p>
                             <p>
-                                If you’d like to support this free app, please consider <span className={"font-medium"}>Donating</span> &mdash; and remember to share your progress with us on <span className={"font-medium"}>BlueSky</span> or <span className={"font-medium"}>Instagram</span>!
+                                If you’d like to support this free app, please consider <span className={"font-medium"}>Donating</span> &mdash; and remember to share your progress with us on <Link href={"https://bsky.app/profile/batak.asia"} className={"font-medium"}>BlueSky</Link>!
                             </p>
                         </>
                     )) }

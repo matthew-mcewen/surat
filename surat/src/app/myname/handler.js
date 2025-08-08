@@ -24,7 +24,7 @@ export default function WriteMyName() {
                     <div className={"w-full h-1/4 bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center p-1.5 text-center"}>
                         <h4 className={"text-xl py-1 pt-0"}>Hello, my name is &hellip;</h4>
                         <div className={"z-20 card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center text-center"}>
-                            <h4 className={"text-5xl"}>
+                            <h4 className={"text-5xl font-['Batak']"}>
                                 { transliteratedName || `...` }
                             </h4>
                         </div>
