@@ -1,6 +1,6 @@
 "use client";
 import { ALL_GLYPHS } from "@/app/letters/array";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function GlyphArea() {
     const [dialect,setDialect] = useState("");
