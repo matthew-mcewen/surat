@@ -65,18 +65,20 @@ export function Footer() {
                     <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
                     <p>Audio recordings &mdash; Peter Isolato (CC BY-SA 3.0)</p>
                 </div>
-                <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-x-2"}>
-                    <p>Ko-Fi</p>
-                    <i className={"bi-cup-hot-fill justify-self-end"}/>
-                </Link>
-                <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-x-2"}>
-                    <p>Bsky</p>
-                    <i className={"bi-bluesky justify-self-end"}/>
-                </Link>
-                <Link href={"https://github.com/mattmacc/surat"} className={"grid grid-cols-2 gap-x-2"}>
-                    <p>GitHub</p>
-                    <i className={"bi-github justify-self-end"}/>
-                </Link>
+                <div className={"flex flex-col gap-0.5 justify-self-end"}>
+                    <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-x-2"}>
+                        <p>Ko-Fi</p>
+                        <i className={"bi-cup-hot-fill justify-self-end"}/>
+                    </Link>
+                    <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-x-2"}>
+                        <p>Bsky</p>
+                        <i className={"bi-bluesky justify-self-end"}/>
+                    </Link>
+                    <Link href={"https://github.com/mattmacc/surat"} className={"grid grid-cols-2 gap-x-2"}>
+                        <p>GitHub</p>
+                        <i className={"bi-github justify-self-end"}/>
+                    </Link>
+                </div>
             </footer>
         </>
     )
