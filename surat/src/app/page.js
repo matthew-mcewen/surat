@@ -63,7 +63,7 @@ export function Footer() {
                 <div className={"flex flex-col gap-0.5 w-1/2 lg:w-fit"}>
                     <Link href={"/legal"}>Legal, Terms &amp; Conditions</Link>
                     <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
-                    <p>Audio recordings &mdash; Peter Isolato (CC BY-SA 3.0)</p>
+                    <p>Audio recordings &mdash; Peter Isotalo (CC BY-SA 3.0)</p>
                 </div>
                 <div className={"flex flex-col gap-0.5 justify-self-end lg:w-fit"}>
                     <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-2"}>
