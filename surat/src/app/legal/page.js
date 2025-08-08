@@ -73,6 +73,14 @@ export default function Legal() {
                     </>
                     <>
                         <h2 className={"text-lg font-medium uppercase tracking-wider"}>
+
+                        </h2>
+                        <p>
+                            Batak.asia and all materials contained therein is provided "as is". No warranties, representations or guarantees are made as to its accuracy, reliability, fitness for a particular purpose,
+                        </p>
+                    </>
+                    <>
+                        <h2 className={"text-lg font-medium uppercase tracking-wider"}>
                             5. Your Rights
                         </h2>
                         <p>
