@@ -25,9 +25,9 @@ export function Navbar() {
     return (
         <>
             <nav className={"flex justify-between px-2 font-light select-none"}>
-                <Link href={"/"} className="text-4xl text-center pb-2 tracking-wide w-fit">
+                <a href={"/"} className="text-4xl text-center pb-2 tracking-wide w-fit">
                     Surat Batak
-                </Link>
+                </a>
                 <ul className="flex-row text-xl h-fit my-auto gap-4 flex justify-self-center text-center">
                     <a href={"/#writemyname"}>Write My Name</a>
                     <a href={"/#howitworks"}>How It Works</a>
@@ -61,19 +61,19 @@ export function Footer() {
         <>
             <footer id={"footer"} className={"container mx-auto flex flex-row justify-between px-4 border-t w-full select-none py-2"}>
                 <div className={"flex flex-col gap-0.5 w-1/2 lg:w-fit"}>
-                    <Link href={"/legal"}>Legal, Terms &amp; Conditions</Link>
+                    <a href={"/legal"}>Legal, Terms &amp; Conditions</a>
                     <p>All contents licensed under CC BY-SA 4.0 unless noted otherwise</p>
                     <p>Audio recordings &mdash; Peter Isotalo (CC BY-SA 3.0)</p>
                 </div>
                 <div className={"flex flex-col gap-0.5 justify-self-end lg:w-fit"}>
-                    <Link href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-2"}>
+                    <a href={"https://ko-fi.com/batak"} className={"grid grid-cols-2 gap-2"}>
                         <p>Ko-Fi</p>
                         <i className={"bi-cup-hot-fill justify-self-end"}/>
-                    </Link>
-                    <Link href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-2"}>
+                    </a>
+                    <a href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-2"}>
                         <p>BlueSky</p>
                         <i className={"bi-bluesky justify-self-end"}/>
-                    </Link>
+                    </a>
                     {/*<Link href={"https://github.com/"} className={"grid grid-cols-2 gap-2"}>*/}
                     {/*    <p>GitHub</p>*/}
                     {/*    <i className={"bi-github justify-self-end"}/>*/}
