@@ -18,7 +18,7 @@ export default function HowItWorks() {
                         By contrast, Surat Batak is an <span className={"font-medium"}>abugida:</span> each letter represents a syllable, with <span className={"font-medium"}>one consonant</span> + <span className={"font-medium"}>one vowel.</span>
                     </p>
                     <p>
-                        Each letter has the "A" vowel by default. We can change the vowel by attaching an accent mark, called Anak Si Surat.
+                        Each letter ends with the "A" vowel by default. We can change the vowel by attaching an accent mark, called Anak Si Surat.
                         For example: <span className={"text-xl font-medium px-0.5 font-['Batak']"}>ᯖ</span> on its own is read as "ta", but if we write <span className={"text-xl medium px-0.5 font-['Batak']"}>ᯖᯬ</span> it becomes "to", and <span className={"text-xl font-medium px-0.5 font-['Batak']"}>ᯖᯪ</span> makes it "ti".
                     </p>
                     <p>

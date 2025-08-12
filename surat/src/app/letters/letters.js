@@ -1,28 +1,37 @@
 "use client";
-import { ALL_GLYPHS } from "@/app/letters/array";
+import { ALL_GLYPHS,ALL_DIACRITICS } from "@/app/letters/array";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
 export default function GlyphArea() {
     const [dialect,setDialect] = useState("");
+    const [diacritic, setDiacritic] = useState("");
     return (
         <>
             <SelectGlyphs setDialect={ setDialect } />
+            <SelectDiacritic dialect={ dialect } setDiacritic={ setDiacritic } />
             <div id="surat-area" className="grid grid-cols-4 md:grid-cols-7 xl:grid-cols-8 gap-1.5 text-center select-none">
-                <GlyphList dialect={ dialect } />
+                <GlyphList dialect={ dialect } diacritic={ diacritic } />
             </div>
         </>
     )
 }
 
-export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
+
+export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph,diacritic }) {
     const [copied,setCopied] = useState(false);
     const [play] = useSound(`/audio/${latinGlyph}.mp3`);
     return (
         <>
             <div id={"glyphtiles"} className="w-full aspect-square z-10 group relative overflow-hidden card-letter bg-[#83c9f4]/30 dark:bg-[#a3d5ff]/20 dark:hover:bg-[#a3d5ff]/30 flex flex-col justify-items-center">
                 <h3 className="font-['Batak'] text-5xl lg:text-6xl xl:text-7xl p-1.5 m-auto">
-                    { batakGlyph }
+                    { (!diacritic) && (
+                        { batakGlyph }
+                    ) || (
+                        <>
+                            { batakGlyph }{ diacritic }
+                        </>
+                    )}
                 </h3>
                 <div className={"peer absolute left-0 top-0 w-full h-full hover:bg-[#a3d5ff]/90 dark:hover:bg-[#00487C]/90 text-transparent hover:text-[#00487C] dark:hover:text-[#a3d5ff] transition ease-in-out"}>
                     <div className={"flex flex-col justify-items-center h-full w-fit m-auto text-center xl:text-base"}>
@@ -66,7 +75,7 @@ export function GlyphCard({ batakGlyph,latinGlyph,ipaGlyph }) {
     )
 }
 
-function GlyphList({ dialect }) {
+function GlyphList({ dialect,diacritic }) {
     let glyphs = null;
     if (!dialect || dialect === "toba") {
         glyphs = ALL_GLYPHS.toba;
@@ -87,7 +96,7 @@ function GlyphList({ dialect }) {
     return (
         <>
             { glyphs && glyphs.map((g, index) => (
-                <GlyphCard key={index} batakGlyph={g.batakGlyph} latinGlyph={g.latinGlyph}/>
+                <GlyphCard key={index} batakGlyph={g.batakGlyph} latinGlyph={g.latinGlyph} diacritic={ diacritic } />
             ))}
             { (!glyphs || !glyphs.length) && (
                 <div className={"text-center text-2xl font-light w-full col-span-12"}>
@@ -95,6 +104,42 @@ function GlyphList({ dialect }) {
                     <p className={"text-lg"}>Try re-loading the page</p>
                 </div>
             )}
+        </>
+    )
+}
+
+function SelectDiacritic({ dialect, setDiacritic }) {
+    let diacritics = null;
+    if (!dialect || dialect === "toba") {
+        diacritics = ALL_DIACRITICS.toba;
+    } else {
+        if (dialect === "karo") {
+            diacritics = ALL_DIACRITICS.karo;
+        }
+        if (dialect === "mandailing") {
+            diacritics = ALL_DIACRITICS.mandailing;
+        }
+        if (dialect === "pakpak") {
+            diacritics = ALL_DIACRITICS.pakpak;
+        }
+        if (dialect === "simalungun") {
+            diacritics = ALL_DIACRITICS.simalungun;
+        }
+    }
+    return (
+        <>
+            <div className={`grid grid-cols-${8} gap-2 mx-auto justify-center items-center`}>
+                { diacritics && diacritics.map((d, index) => (
+                    <>
+                        <div className={"flex gap-2 card-letter"}>
+                            <input type={"radio"} name={"diacritic"} value={ d } onSelect={e => {setDiacritic(e.target.value)}} />
+                            <label htmlFor={`diacritic-${ d.diacritic }`} className={"flex flex-row gap-1"}>
+                                &mdash;{ d.final }
+                            </label>
+                        </div>
+                    </>
+                ))}
+            </div>
         </>
     )
 }

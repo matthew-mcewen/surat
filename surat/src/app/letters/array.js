@@ -108,6 +108,54 @@ export const ALL_GLYPHS = {
     ]
 }
 
+export const ALL_DIACRITICS = {
+    toba: [
+        {final:"a",diacritic:""},
+        {final:"e",diacritic:"$ᯧ"},
+        {final:"i",diacritic:"$ᯪ"},
+        {final:"o",diacritic:"$ᯬ"},
+        {final:"u",diacritic:"$ᯮ"},
+        {final:"ng",diacritic:"$ᯰ"},
+        {final:"h",diacritic:"$ᯱ"}
+    ],
+    karo: [
+        {final:"a",diacritic:""},
+        {final:"e",diacritic:"$ᯧ"},
+        {final:"i",diacritic:"$ᯫ"},
+        {final:"o",diacritic:"$ᯬ"},
+        {final:"u",diacritic:"$ᯮ"},
+        {final:"ng",diacritic:"$ᯰ"},
+        {final:"h",diacritic:"$ᯱ"}
+    ],
+    mandailing: [
+        {final:"a",diacritic:""},
+        {final:"e",diacritic:"$ᯧ"},
+        {final:"i",diacritic:"$ᯪ"},
+        {final:"o",diacritic:"$ᯬ"},
+        {final:"u",diacritic:"$ᯮ"},
+        {final:"ng",diacritic:"$ᯰ"},
+        {final:"h",diacritic:"$ᯱ"}
+    ],
+    pakpak: [
+        {final:"a",diacritic:""},
+        {final:"e",diacritic:"$ᯨ"},
+        {final:"i",diacritic:"$ᯪ"},
+        {final:"o",diacritic:"$ᯬ"},
+        {final:"u",diacritic:"$ᯮ"},
+        {final:"ng",diacritic:"$ᯰ"},
+        {final:"h",diacritic:"$ᯱ"}
+    ],
+    simalungun: [
+        {final:"a",diacritic:""},
+        {final:"e",diacritic:"$ᯧ"},
+        {final:"i",diacritic:"$ᯪ"},
+        {final:"o",diacritic:"$ᯬ"},
+        {final:"u",diacritic:"$ᯮ"},
+        {final:"ng",diacritic:"$ᯰ"},
+        {final:"h",diacritic:"$ᯱ"}
+    ]
+}
+
 export const TRANSLITERATION_MAP = {
         // Basic consonant + inherent vowel "a"
         'ba': 'ᯅ',
