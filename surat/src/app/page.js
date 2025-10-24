@@ -13,7 +13,7 @@ export default function Home() {
                 <Navbar/>
                 <GlyphArea/>
                 <HowItWorks/>
-                <WriteMyName/>
+                {/*<WriteMyName/>*/}
                 {/*<Resources/>*/}
             </div>
             <Footer/>
@@ -29,19 +29,9 @@ export function Navbar() {
                     Surat Batak
                 </h1>
                 <ul className="flex-row text-xl h-fit my-auto gap-4 flex justify-self-center text-center">
-                    <a href={"#writemyname"}>Write My Name</a>
-                    <a href={"#howitworks"}>How It Works</a>
+                    <a href={"https://ko-fi.com/batak"}>Support</a>
+                    <a href={"#howitworks"}>Learn More</a>
                 </ul>
-                <div className={"flex-row gap-4 h-fit my-auto hidden"}>
-                    <div className={"flex gap-2"}>
-                        <i className="bi-cup-hot text-lg my-auto"/>
-                        <p className={"my-auto"}>Donate</p>
-                    </div>
-                    <div className={"flex gap-2"}>
-                        <i className="bi-translate text-lg my-auto"/>
-                        <p className={"my-auto"}>English</p>
-                    </div>
-                </div>
                 {/*mobile menu - wip*/}
                 {/*<div className={"flex lg:hidden relative w-1/2 justify-end"}>*/}
                 {/*    <i className={"bi-list text-3xl my-auto peer self-end"}/>*/}
@@ -71,7 +61,7 @@ export function Footer() {
                         <i className={"bi-cup-hot-fill justify-self-end"}/>
                     </a>
                     <a href={"https://bsky.app/profile/batak.asia"} className={"grid grid-cols-2 gap-2"}>
-                        <p>BlueSky</p>
+                        <p>Bluesky</p>
                         <i className={"bi-bluesky justify-self-end"}/>
                     </a>
                     {/*<Link href={"https://github.com/"} className={"grid grid-cols-2 gap-2"}>*/}

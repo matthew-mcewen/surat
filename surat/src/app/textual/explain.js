@@ -22,10 +22,10 @@ export default function HowItWorks() {
                         For example: <span className={"text-xl font-medium px-0.5 font-['Batak']"}>ᯖ</span> on its own is read as "ta", but if we write <span className={"text-xl medium px-0.5 font-['Batak']"}>ᯖᯬ</span> it becomes "to", and <span className={"text-xl font-medium px-0.5 font-['Batak']"}>ᯖᯪ</span> makes it "ti".
                     </p>
                     <p>
-                        When you're ready &mdash; Using the Tiles above, try to understand this word written in Surat Batak:
+                        When you're ready: &mdash; Using the cards above, try to understand this word written in Surat Batak:
                     </p>
                     { (!revealed && (
-                        <button onClick={e => { setRevealed(true) }} className={"flex flex-col gap-1 w-fit mx-auto"}>
+                        <button onClick={e => { setRevealed(true) }} className={"flex flex-col gap-1 w-fit mx-auto cursor-pointer"}>
                             <span className={"text-2xl w-fit mx-auto font-['Batak']"}>ᯘᯮᯒᯖ᯲ </span>
                             <span className={"w-fit mx-auto"}>Click to reveal&hellip;</span>
                         </button>
